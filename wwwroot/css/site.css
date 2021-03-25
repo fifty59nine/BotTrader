@@ -81,12 +81,12 @@ body {
     margin: auto;
     width: 50%;
 }
-
-.pden{
-  font-size: 30px;
-  color: yellow
+.pden {
+    font-size: 30px;
+    color: yellow;
 }
-.proma{
-  font-size: 25;
-  color: red;
+
+.proma {
+    font-size: 25px;
+    color: red;
 }
