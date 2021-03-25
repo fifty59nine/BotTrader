@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Database";
+}
+<h1 class="middle">@ViewData["Title"]</h1>
+
+<table border="1" class="middle mytable">
+    <tr>
+        <td>
+            ID
+        </td>
+        <td>
+            Login
+        </td>
+        <td>
+            Password
+        </td>
+        <td>
+            Balance
+        </td>
+        <td>
+            DELETE
+        </td>
+    </tr>
+    @foreach (var user in ViewBag.Users)
+    {
+        <tr>
+            <td>
+                @user.Id
+            </td>
+            <td>
+                @user.Login
+            </td>
+            <td>
+                @user.Password
+            </td>
+            <td>
+                @user.Balance
+            </td>
+            <td>
+                <a href="~/Home/Delete?id=@user.Id">X</a>
+            </td>
+        </tr>
+    }
+</table>
+<hr />
+    <form action="~/Home/Update" method="post" class="myform middle">
+        <label for="id">Выберите ID пользователя для редактирования</label>
+        <select name="id">
+            @foreach (var id in ViewBag.ids)
+            {
+                <option>@id</option>
+            }
+        </select><br />
+        <label for="newbalance">Новый баланс</label>
+        <input type="number" name="newbalance" /><br />
+        <input type="submit" value="Применить" />
+    </form>
+
+
