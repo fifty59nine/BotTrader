@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="static/index.js"></script>
-    <link rel="stylesheet" href="static/index.css">
-    <title>Yanik Vernis</title>
-</head>
-<body>
+@{ 
+    ViewData["title"] = "Yanik Vernis";
+}
     <form>
         <input type="text" class="forminput" name="forminput" placeholder="yanik chmo" id="den">
-        <input type="submit" onclick="jopa()">
+        <input type="submit" onclick="alert(document.getElementById('den').value)">
     </form>
     <hr>
-    <table class="table" border="1">
+    <table class="middle mytable" border="1">
         <tr>
             <td class="supertd">
                 NAME
@@ -43,5 +35,3 @@
     <hr>
     <p class="pden">Den</p>
     <p class="proma">Roma</p>
-</body>
-</html>
